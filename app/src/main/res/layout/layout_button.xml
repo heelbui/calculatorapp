@@ -19,7 +19,7 @@
         android:layout_marginEnd="@dimen/button_margin_small"
         android:backgroundTint="@color/white"
         android:text="@string/sqrt"
-        android:onClick="onDigit"
+        android:onClick="onOperator"
         android:textColor="@color/black"
         android:textSize="@dimen/text_button_medium"
         tools:ignore="UsingOnClickInXml" />
@@ -33,7 +33,7 @@
         android:layout_marginEnd="@dimen/button_margin_small"
         android:backgroundTint="@color/white"
         android:text="@string/pi"
-        android:onClick="onDigit"
+        android:onClick="onOperator"
         android:textColor="@color/black"
         android:textSize="@dimen/text_button_medium"
         tools:ignore="UsingOnClickInXml" />
@@ -47,7 +47,7 @@
         android:layout_marginEnd="@dimen/button_margin_small"
         android:backgroundTint="@color/white"
         android:text="@string/power"
-        android:onClick="onDigit"
+        android:onClick="onOperator"
         android:textColor="@color/black"
         android:textSize="@dimen/text_button_medium"
         tools:ignore="UsingOnClickInXml" />
@@ -61,7 +61,7 @@
         android:layout_marginEnd="@dimen/button_margin_small"
         android:backgroundTint="@color/white"
         android:text="@string/fac"
-        android:onClick="onDigit"
+        android:onClick="onOperator"
         android:textColor="@color/black"
         android:textSize="@dimen/text_button_medium"
         tools:ignore="UsingOnClickInXml" />
@@ -107,7 +107,7 @@
         android:text="@string/mod"
         android:textColor="@color/black"
         android:layout_height="80dp"
-        android:onClick="onDigit"
+        android:onClick="onOperator"
         android:textSize="@dimen/text_button_medium"
         tools:ignore="UsingOnClickInXml" />
 
@@ -122,7 +122,7 @@
         android:text="@string/divide"
         android:textColor="@color/black"
         android:layout_height="80dp"
-        android:onClick="onDigit"
+        android:onClick="onOperator"
         android:textSize="@dimen/text_button_medium"
         tools:ignore="UsingOnClickInXml" />
 
@@ -182,7 +182,7 @@
         android:text="@string/x"
         android:textAllCaps="false"
         android:textColor="@color/black"
-        android:onClick="onDigit"
+        android:onClick="onOperator"
         android:layout_height="80dp"
         android:textSize="@dimen/text_button_medium"
         tools:ignore="UsingOnClickInXml" />
@@ -243,7 +243,7 @@
         android:text="@string/minus"
         android:textColor="@color/black"
         android:layout_height="80dp"
-        android:onClick="onDigit"
+        android:onClick="onOperator"
         android:textSize="@dimen/text_button_medium"
         tools:ignore="UsingOnClickInXml" />
 
@@ -303,7 +303,7 @@
         android:text="@string/add"
         android:textColor="@color/black"
         android:layout_height="80dp"
-        android:onClick="onDigit"
+        android:onClick="onOperator"
         android:textSize="@dimen/text_button_medium"
         tools:ignore="UsingOnClickInXml" />
 

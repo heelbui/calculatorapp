@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import org.mariuszgromada.math.mxparser.*
+import kotlin.math.roundToLong
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,14 +27,21 @@ class MainActivity : AppCompatActivity() {
 
     fun onResult(view: View) {
         val input = etInput?.text.toString()
+        // convert string to right format
         input.replace("×", "*")
         input.replace("÷", "/")
 
+        // calculate expression via library
         val expression = Expression(input)
         val result: Double = expression.calculate()
 
-        etInput?.setText(result.toString())
-        etInput?.setSelection(result.toString().length)
+        if ((result % 1.0) == 0.0){
+            etInput?.setText(result.roundToLong().toString())
+            etInput?.setSelection(result.roundToLong().toString().length)
+        } else {
+            etInput?.setText(result.toString())
+            etInput?.setSelection(result.toString().length)
+        }
         isDot = false
         isNumeric = true
     }
@@ -68,10 +76,11 @@ class MainActivity : AppCompatActivity() {
         etInput?.setText("")
         isDot = false
         isNumeric = false
+        hasDot = false
     }
 
     fun onDotPress(view: View) {
-        if (isNumeric && !isDot)
+        if (isNumeric && !isDot && !hasDot)
             updateString((view as Button).text as String)
         isDot = true
         isNumeric = false
@@ -82,6 +91,13 @@ class MainActivity : AppCompatActivity() {
         updateString((view as Button).text as String)
         isDot = false
         isNumeric = true
+    }
+
+    fun onOperator(view: View) {
+        updateString((view as Button).text as String)
+        isDot = false
+        isNumeric = false
+        hasDot = false
     }
 
     fun onBackSpace(view: View) {
