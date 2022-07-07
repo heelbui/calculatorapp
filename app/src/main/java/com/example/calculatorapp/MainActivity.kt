@@ -6,12 +6,16 @@ import android.text.SpannableStringBuilder
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
+import androidx.core.widget.addTextChangedListener
 import org.mariuszgromada.math.mxparser.*
 import kotlin.math.roundToLong
 
 class MainActivity : AppCompatActivity() {
 
     private var etInput: EditText? = null
+    private var tvResult: TextView? = null
+
     private var isNumeric = false
     private var isDot = false
     private var hasDot = false
@@ -21,8 +25,40 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         etInput = findViewById(R.id.etInput)
-        etInput?.showSoftInputOnFocus = false
+        tvResult = findViewById(R.id.tvResult)
 
+        etInput?.showSoftInputOnFocus = false
+        etInput?.addTextChangedListener {
+            calculateResult()
+        }
+
+    }
+
+    private fun calculateResult() {
+        val input = etInput?.text.toString()
+        // convert string to right format
+        input.replace("×", "*")
+        input.replace("÷", "/")
+
+        // calculate expression via library
+        val expression = Expression(input)
+        val result: Double = expression.calculate()
+
+        // round result
+        if ((result % 1.0) == 0.0){
+            if (result.roundToLong().toString().length > 14)
+                tvResult?.text = result.roundToLong().toString().substring(0,14)
+            else
+                tvResult?.text = result.roundToLong().toString()
+        }
+        else {
+            if (result.toString().length > 14)
+                tvResult?.text = result.toString().substring(0,14)
+            else
+                tvResult?.text = result.toString()
+        }
+        isDot = false
+        isNumeric = true
     }
 
     fun onResult(view: View) {
@@ -35,6 +71,7 @@ class MainActivity : AppCompatActivity() {
         val expression = Expression(input)
         val result: Double = expression.calculate()
 
+        // round result
         if ((result % 1.0) == 0.0){
             etInput?.setText(result.roundToLong().toString())
             etInput?.setSelection(result.roundToLong().toString().length)
@@ -42,6 +79,7 @@ class MainActivity : AppCompatActivity() {
             etInput?.setText(result.toString())
             etInput?.setSelection(result.toString().length)
         }
+        tvResult?.text = ""
         isDot = false
         isNumeric = true
     }
@@ -74,6 +112,7 @@ class MainActivity : AppCompatActivity() {
 
     fun onClearAll(view: View) {
         etInput?.setText("")
+        tvResult?.text = ""
         isDot = false
         isNumeric = false
         hasDot = false

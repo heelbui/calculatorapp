@@ -73,7 +73,7 @@
         android:layout_columnWeight="1"
         android:layout_marginStart="@dimen/button_margin_small"
         android:layout_marginEnd="@dimen/button_margin_small"
-        android:backgroundTint="#3F51B5"
+        android:backgroundTint="@color/blue"
         android:text="@string/ac"
         android:textColor="@color/white"
         android:layout_height="80dp"
