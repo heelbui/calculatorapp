@@ -7,8 +7,8 @@
     android:rowCount="2"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tvInput"
+    <EditText
+        android:id="@+id/etInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_row="0"
@@ -17,9 +17,12 @@
         android:background="@color/white"
         android:gravity="end|bottom"
         android:padding="20dp"
-        android:text="Hello World!"
+        android:text=""
         android:textColor="@color/black"
-        android:textSize="36sp" />
+        android:textSize="45sp"
+        android:autofillHints=""
+        android:inputType="none"
+        tools:ignore="LabelFor" />
 
     <include
         android:id="@+id/layout_btn"

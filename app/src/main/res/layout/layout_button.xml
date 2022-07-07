@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="2dp"
@@ -18,8 +19,10 @@
         android:layout_marginEnd="@dimen/button_margin_small"
         android:backgroundTint="@color/white"
         android:text="@string/sqrt"
+        android:onClick="onDigit"
         android:textColor="@color/black"
-        android:textSize="@dimen/text_button_medium" />
+        android:textSize="@dimen/text_button_medium"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/btnPi"
@@ -30,8 +33,10 @@
         android:layout_marginEnd="@dimen/button_margin_small"
         android:backgroundTint="@color/white"
         android:text="@string/pi"
+        android:onClick="onDigit"
         android:textColor="@color/black"
-        android:textSize="@dimen/text_button_medium" />
+        android:textSize="@dimen/text_button_medium"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/btnPower"
@@ -42,8 +47,10 @@
         android:layout_marginEnd="@dimen/button_margin_small"
         android:backgroundTint="@color/white"
         android:text="@string/power"
+        android:onClick="onDigit"
         android:textColor="@color/black"
-        android:textSize="@dimen/text_button_medium" />
+        android:textSize="@dimen/text_button_medium"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/btnFactorial"
@@ -54,8 +61,10 @@
         android:layout_marginEnd="@dimen/button_margin_small"
         android:backgroundTint="@color/white"
         android:text="@string/fac"
+        android:onClick="onDigit"
         android:textColor="@color/black"
-        android:textSize="@dimen/text_button_medium" />
+        android:textSize="@dimen/text_button_medium"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/btnAC"
@@ -68,7 +77,9 @@
         android:text="@string/ac"
         android:textColor="@color/white"
         android:layout_height="80dp"
-        android:textSize="@dimen/text_button_medium" />
+        android:onClick="onClearAll"
+        android:textSize="@dimen/text_button_medium"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/btnBrackets"
@@ -80,8 +91,10 @@
         android:backgroundTint="@color/white"
         android:text="@string/brackets"
         android:textColor="@color/black"
+        android:onClick="onBrackets"
         android:layout_height="80dp"
-        android:textSize="@dimen/text_button_medium" />
+        android:textSize="@dimen/text_button_medium"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/btnMod"
@@ -94,7 +107,9 @@
         android:text="@string/mod"
         android:textColor="@color/black"
         android:layout_height="80dp"
-        android:textSize="@dimen/text_button_medium" />
+        android:onClick="onDigit"
+        android:textSize="@dimen/text_button_medium"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/btnDivide"
@@ -107,7 +122,9 @@
         android:text="@string/divide"
         android:textColor="@color/black"
         android:layout_height="80dp"
-        android:textSize="@dimen/text_button_medium" />
+        android:onClick="onDigit"
+        android:textSize="@dimen/text_button_medium"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/btn7"
@@ -120,7 +137,9 @@
         android:text="@string/_7"
         android:textColor="@color/black"
         android:layout_height="80dp"
-        android:textSize="@dimen/text_button_medium" />
+        android:onClick="onDigit"
+        android:textSize="@dimen/text_button_medium"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/btn8"
@@ -133,7 +152,9 @@
         android:text="@string/_8"
         android:textColor="@color/black"
         android:layout_height="80dp"
-        android:textSize="@dimen/text_button_medium" />
+        android:onClick="onDigit"
+        android:textSize="@dimen/text_button_medium"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/btn9"
@@ -146,7 +167,9 @@
         android:text="@string/_9"
         android:textColor="@color/black"
         android:layout_height="80dp"
-        android:textSize="@dimen/text_button_medium" />
+        android:onClick="onDigit"
+        android:textSize="@dimen/text_button_medium"
+        tools:ignore="UsingOnClickInXml"/>
 
     <Button
         android:id="@+id/btnMultiply"
@@ -159,8 +182,10 @@
         android:text="@string/x"
         android:textAllCaps="false"
         android:textColor="@color/black"
+        android:onClick="onDigit"
         android:layout_height="80dp"
-        android:textSize="@dimen/text_button_medium" />
+        android:textSize="@dimen/text_button_medium"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/btn4"
@@ -173,7 +198,9 @@
         android:text="@string/_4"
         android:textColor="@color/black"
         android:layout_height="80dp"
-        android:textSize="@dimen/text_button_medium" />
+        android:onClick="onDigit"
+        android:textSize="@dimen/text_button_medium"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/btn5"
@@ -186,7 +213,9 @@
         android:text="@string/_5"
         android:textColor="@color/black"
         android:layout_height="80dp"
-        android:textSize="@dimen/text_button_medium" />
+        android:onClick="onDigit"
+        android:textSize="@dimen/text_button_medium"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/btn6"
@@ -199,7 +228,9 @@
         android:text="@string/_6"
         android:textColor="@color/black"
         android:layout_height="80dp"
-        android:textSize="@dimen/text_button_medium" />
+        android:onClick="onDigit"
+        android:textSize="@dimen/text_button_medium"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/btnMinus"
@@ -212,7 +243,9 @@
         android:text="@string/minus"
         android:textColor="@color/black"
         android:layout_height="80dp"
-        android:textSize="@dimen/text_button_medium" />
+        android:onClick="onDigit"
+        android:textSize="@dimen/text_button_medium"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/btn1"
@@ -225,7 +258,9 @@
         android:text="@string/_1"
         android:textColor="@color/black"
         android:layout_height="80dp"
-        android:textSize="@dimen/text_button_medium" />
+        android:onClick="onDigit"
+        android:textSize="@dimen/text_button_medium"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/btn2"
@@ -238,7 +273,9 @@
         android:text="@string/_2"
         android:textColor="@color/black"
         android:layout_height="80dp"
-        android:textSize="@dimen/text_button_medium" />
+        android:onClick="onDigit"
+        android:textSize="@dimen/text_button_medium"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/btn3"
@@ -251,7 +288,9 @@
         android:text="@string/_3"
         android:textColor="@color/black"
         android:layout_height="80dp"
-        android:textSize="@dimen/text_button_medium" />
+        android:onClick="onDigit"
+        android:textSize="@dimen/text_button_medium"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/btnAdd"
@@ -264,7 +303,9 @@
         android:text="@string/add"
         android:textColor="@color/black"
         android:layout_height="80dp"
-        android:textSize="@dimen/text_button_medium" />
+        android:onClick="onDigit"
+        android:textSize="@dimen/text_button_medium"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/btn0"
@@ -277,7 +318,9 @@
         android:text="@string/_0"
         android:textColor="@color/black"
         android:layout_height="80dp"
-        android:textSize="@dimen/text_button_medium" />
+        android:onClick="onDigit"
+        android:textSize="@dimen/text_button_medium"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/btnDot"
@@ -290,7 +333,9 @@
         android:text="@string/dot"
         android:textColor="@color/black"
         android:layout_height="80dp"
-        android:textSize="@dimen/text_button_medium" />
+        android:onClick="onDotPress"
+        android:textSize="@dimen/text_button_medium"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/btnDel"
@@ -302,8 +347,10 @@
         android:backgroundTint="#F06292"
         android:textColor="@color/black"
         android:text="@string/del"
+        android:onClick="onBackSpace"
         android:layout_height="80dp"
-        android:textSize="@dimen/text_button_medium" />
+        android:textSize="@dimen/text_button_medium"
+        tools:ignore="UsingOnClickInXml" />
 
     <Button
         android:id="@+id/btnEnter"
@@ -317,6 +364,8 @@
         android:text="@string/enter"
         android:textStyle="bold"
         android:layout_height="80dp"
-        android:textSize="24sp" />
+        android:onClick="onResult"
+        android:textSize="24sp"
+        tools:ignore="UsingOnClickInXml" />
 
 </GridLayout>
